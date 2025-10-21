@@ -1,0 +1,98 @@
+[
+  {
+    "toyId": 1,
+    "toyName": "Lego Classic Bricks",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 49.99,
+    "rating": 4.7,
+    "availableQuantity": 75,
+    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
+    "pictureURL": "https://i.ibb.co.com/VpS4tYPk/matt-hudson-Oon-VLLx8fq-M-unsplash.jpg",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 2,
+    "toyName": "Barbie Dreamhouse Doll Set",
+    "sellerName": "Little Princess Store",
+    "sellerEmail": "barbie@princessstore.com",
+    "price": 39.99,
+    "rating": 4.6,
+    "availableQuantity": 60,
+    "description": "A beautiful Barbie dreamhouse set with furniture and accessories for endless imaginative play.",
+    "pictureURL": "https://i.ibb.co.com/XxYJs6jf/tengyart-n-Gi9ya-e-FM-unsplash.jpg",
+    "subCategory": "Dolls"
+  },
+  {
+    "toyId": 3,
+    "toyName": "Hot Wheels Racing Car Set",
+    "sellerName": "Speed Racers BD",
+    "sellerEmail": "sales@speedracersbd.com",
+    "price": 24.99,
+    "rating": 4.5,
+    "availableQuantity": 50,
+    "description": "High-speed car racing set with strong build quality and durable tracks for endless fun.",
+    "pictureURL": "https://i.ibb.co.com/TJxHXFH/alex-farkas-Ja1-HPGLern-I-unsplash.jpg",
+    "subCategory": "Vehicles"
+  },
+  {
+    "toyId": 4,
+    "toyName": "Teddy Bear Plush Toy (Large)",
+    "sellerName": "Soft & Cuddly",
+    "sellerEmail": "contact@softandcuddly.com",
+    "price": 19.99,
+    "rating": 4.9,
+    "availableQuantity": 90,
+    "description": "Super soft and huggable teddy bear made from premium non-toxic fabric. Perfect for kids and gifts.",
+    "pictureURL": "https://i.ibb.co.com/yB6s4DS9/natalie-kinnear-j-KQ7-N3u1ln-E-unsplash.jpg",
+    "subCategory": "Soft Toys"
+  },
+  {
+    "toyId": 5,
+    "toyName": "Remote Control Monster Truck",
+    "sellerName": "TechToys Bangladesh",
+    "sellerEmail": "info@techtoysbd.com",
+    "price": 29.99,
+    "rating": 4.8,
+    "availableQuantity": 40,
+    "description": "A powerful RC monster truck with off-road wheels and long-lasting battery for adventurous rides.",
+    "pictureURL": "https://i.ibb.co.com/9kC6kfw9/c-joyful-Q-cj4p-PXYm-Y-unsplash.jpg",
+    "subCategory": "Electronics"
+  },
+  {
+    "toyId": 6,
+    "toyName": "Magic Drawing Board for Kids",
+    "sellerName": "Smart Learners",
+    "sellerEmail": "support@smartlearners.com",
+    "price": 14.99,
+    "rating": 4.3,
+    "availableQuantity": 85,
+    "description": "Reusable glowing drawing board for kids to learn and create colorful art with fun.",
+    "pictureURL": "https://i.ibb.co.com/wFnYFWNx/sticker-it-PSutyl2-PG-8-unsplash.jpg",
+    "subCategory": "Educational Toys"
+  },
+  {
+    "toyId": 7,
+    "toyName": "Musical Baby Piano Toy",
+    "sellerName": "BabyLand BD",
+    "sellerEmail": "care@babylandbd.com",
+    "price": 22.49,
+    "rating": 4.6,
+    "availableQuantity": 65,
+    "description": "Colorful piano toy with lights and sounds designed to develop babies’ hearing and motor skills.",
+    "pictureURL": "https://i.ibb.co.com/hRVLZ13X/quentin-basnier-LNag-SGAN-ZQ-unsplash.jpg",
+    "subCategory": "Baby Toys"
+  },
+  {
+    "toyId": 8,
+    "toyName": "Spider-Man Action Figure",
+    "sellerName": "Hero Toys",
+    "sellerEmail": "info@herotoys.com",
+    "price": 27.99,
+    "rating": 4.8,
+    "availableQuantity": 70,
+    "description": "Bring home your favorite superhero Spider-Man with this detailed and posable action figure.",
+    "pictureURL": "https://i.ibb.co.com/TCQmzTB/king-lip-b4-YJt1i3o-U4-unsplash.jpg",
+    "subCategory": "Action Figures"
+  }
+]
