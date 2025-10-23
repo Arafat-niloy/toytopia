@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-neutral text-neutral-content flex justify-between">
+        <footer className="footer grid grid-cols-2   p-10 bg-neutral text-neutral-content lg:flex justify-between">
             <div>
                 <span className="footer-title">ToyTopia</span>
                 <p>A vibrant and playful online marketplace for kids' toys.<br/>Encouraging families to discover local sellers.</p>

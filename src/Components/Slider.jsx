@@ -28,7 +28,6 @@ const Slider = () => {
       });
   }, []); 
 
-  // ডেটা লোড হওয়ার সময় loading-spinner show
   if (loading) {
     return (
       <div className="h-[500px] flex justify-center items-center">
@@ -50,7 +49,6 @@ const Slider = () => {
         loop={true}           
       >
         {
-          // JSON থেকে পাওয়া ডেটা ম্যাপ করে স্লাইড তৈরি
           featuredToys.map(toy => (
             <SwiperSlide key={toy.toyId}>
               

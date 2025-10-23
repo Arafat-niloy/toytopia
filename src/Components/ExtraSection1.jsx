@@ -1,21 +1,30 @@
 import React, { useEffect, useState } from "react";
 import ToyCard from "./ToyCard";
- 
+import Aos from "aos";
+import "aos/dist/aos.css"; 
 
 const ExtraSection1 = () => {
   const [toys, setToys] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState(null);
 
+  
+  useEffect(() => {
+    Aos.init({ duration: 800, once: true });
+  }, []);
+
+  
   useEffect(() => {
     fetch("/toys.json")
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
         setLoading(false);
+        Aos.refresh(); 
       });
   }, []);
 
+ 
   const categories = [...new Set(toys.map((toy) => toy.subCategory))];
 
   if (loading) {
@@ -26,6 +35,7 @@ const ExtraSection1 = () => {
     );
   }
 
+  
   const filteredToys = selectedCategory
     ? toys.filter((toy) => toy.subCategory === selectedCategory)
     : [];
@@ -36,20 +46,26 @@ const ExtraSection1 = () => {
         🧸 Shop by Category
       </h2>
 
+      
       {!selectedCategory && (
-
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-10">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-10"
+          data-aos="zoom-in"
+        >
           {categories.map((category) => {
             const categoryToys = toys.filter(
               (toy) => toy.subCategory === category
             );
             const firstToy = categoryToys[0];
 
+            if (!firstToy) return null;
+
             return (
               <div
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className="p-4 rounded-2xl shadow-md bg-base-100 hover:shadow-xl transition-shadow border cursor-pointer"
+                data-aos="flip-up"
               >
                 <img
                   src={firstToy.pictureURL}
@@ -68,9 +84,9 @@ const ExtraSection1 = () => {
         </div>
       )}
 
+      
       {selectedCategory && (
-        <div>
-
+        <div data-aos="fade-up">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
             <h3 className="text-3xl font-bold text-primary">
               🎯 {selectedCategory} Toys
@@ -83,8 +99,10 @@ const ExtraSection1 = () => {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+            data-aos="zoom-in-up"
+          >
             {filteredToys.map((toy) => (
               <ToyCard key={toy.toyId} toy={toy} />
             ))}
