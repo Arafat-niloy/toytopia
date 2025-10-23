@@ -29,6 +29,8 @@ const ToyDetails = () => {
     rating,
     availableQuantity,
     description,
+    subCategory,
+  
   } = toy;
 
   const handleTryNow = (event) => {
@@ -51,6 +53,7 @@ const ToyDetails = () => {
               className="rounded-lg shadow-lg w-full max-w-md object-cover"
             />
           </div>
+
           <div data-aos="fade-left">
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">{toyName}</h1>
             <p className="text-lg text-gray-600 mb-6">{description}</p>
@@ -65,14 +68,18 @@ const ToyDetails = () => {
             <p className="mb-2">
               <strong>Available:</strong> {availableQuantity} pcs
             </p>
+            <p className="mb-2">
+              <strong>Sub-Category:</strong> {subCategory}
+            </p>
             <div className="mt-4">
-              <span className="text-primary font-bold text-3xl">${price}</span>
+              <strong>Price:</strong> <br /><span className="text-primary font-bold text-3xl">${price}</span>
             </div>
           </div>
         </div>
 
-        {/* Try Now form */}
         <div className="divider"></div>
+
+        {/* Try Now form */}
         <div
           className="max-w-lg mx-auto p-6 bg-base-200 rounded-lg shadow-md"
           data-aos="fade-up"
@@ -83,25 +90,25 @@ const ToyDetails = () => {
           <form onSubmit={handleTryNow}>
             <div className="form-control mb-4">
               <label className="label">
-                <span className="label-text">Your Name</span>
+                <span className="label-text">Your Name :</span>
               </label>
               <input
                 type="text"
                 name="name"
                 defaultValue={user?.displayName}
-                className="input input-bordered"
+                className="input ml-3"
                 required
               />
             </div>
             <div className="form-control mb-4">
               <label className="label">
-                <span className="label-text">Your Email</span>
+                <span className="label-text">Your Email :</span>
               </label>
               <input
                 type="email"
                 name="email"
                 defaultValue={user?.email}
-                className="input input-bordered"
+                className="input ml-3"
                 required
               />
             </div>
