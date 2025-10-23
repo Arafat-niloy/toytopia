@@ -64,7 +64,7 @@ const ExtraSection1 = () => {
               <div
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className="p-4 rounded-2xl shadow-md bg-base-100 hover:shadow-xl transition-shadow border cursor-pointer"
+                className="p-4 rounded-2xl shadow bg-base-100 hover:shadow-2xl cursor-pointer transform hover:scale-105 transition-all duration-800 ease-in-out"
                 data-aos="flip-up"
               >
                 <img

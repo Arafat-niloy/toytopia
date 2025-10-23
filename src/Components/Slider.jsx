@@ -14,7 +14,7 @@ const Slider = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // JSON থেকে ডেটা fetch
+    // json data fetch
     fetch('/toys.json')
       .then(res => res.json())
       .then(data => {
@@ -53,7 +53,7 @@ const Slider = () => {
             <SwiperSlide key={toy.toyId}>
               
               <div 
-                className="h-[550px] w-full bg-cover bg-center rounded-lg relative"
+                className="h-[600px] w-full bg-cover  bg-center rounded-lg relative"
                 style={{ backgroundImage: `url(${toy.pictureURL})` }}
               >
                 {/* black-bg over bg-img */}
@@ -62,7 +62,7 @@ const Slider = () => {
                 {/* slider info */}
                 <div className="relative z-10 h-full flex flex-col justify-center items-center text-center text-white p-8">
                   <h2 className='text-3xl md:text-5xl font-bold mb-4'>{toy.toyName}</h2>
-                  <p className='text-lg max-w-2xl mb-6 line-clamp-3'>
+                  <p className='text-lg max-w-2xl mb-6 '>
                     {toy.description}
                   </p>
                   <Link to={`/toy/${toy.toyId}`} className='btn btn-primary'>
