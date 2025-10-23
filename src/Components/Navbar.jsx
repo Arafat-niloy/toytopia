@@ -83,11 +83,11 @@ const Navbar = () => {
         </div>
         <Link
           to="/"
-          className=" normal-case text-xl md:text-2xl font-bold lg:pl-8 flex items-center gap-2"
+          className=" text-violet-400 text-xl md:text-2xl font-bold lg:pl-8 flex items-center gap-2"
         >
           <span>
-            <img src="/src/assets/toy-store.png" alt="" className="w-10 h-10" />
-          </span>{" "}
+        <img src="/src/assets/letter-t.png" className="w-10 h-10" alt="" />
+          </span>
           ToyTopia
         </Link>
       </div>

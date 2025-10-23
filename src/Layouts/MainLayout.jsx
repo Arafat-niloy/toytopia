@@ -9,7 +9,7 @@ const MainLayout = () => {
   return (
     <div className='h-screen flex flex-col'>
       <Navbar />
-      <div className='flex-1 bg-blue-50 '> 
+      <div className='flex-1 bg-gradient-to-t from-[#cd9cf280] to-[#f6f3ff] '> 
         <Outlet /> 
       </div>
       <Footer />
