@@ -1,11 +1,11 @@
-// src/Pages/Login.jsx
-
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
 import { AuthContext } from "../Providers/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+
 
 const Login = () => {
   const { signIn, googleSignIn } = useContext(AuthContext);
@@ -43,17 +43,19 @@ const Login = () => {
       <Helmet>
         <title>ToyTopia | Login</title>
       </Helmet>
+
       <div className="hero min-h-[calc(100vh-100px)] bg-base-200">
         <div className="hero-content flex-col w-full max-w-md">
           <div className="text-center">
             <h1 className="text-4xl font-bold">Login now!</h1>
           </div>
+
           <div className="card w-full shadow-2xl bg-base-100">
             <form onSubmit={handleLogin} className="card-body">
-              {/* Email Part */}
+              {/* Email */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text">Email:</span>
                 </label>
                 <input
                   type="email"
@@ -61,33 +63,46 @@ const Login = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email"
-                  className="input input-bordered"
+                    className="p-3 w-full border rounded border-gray-300 focus:outline-none focus-within:ring-1 "
                   required
                 />
               </div>
-              {/* Password Part */}
-              <div className="relative mb-4">
+
+              {/* Password */}
+              <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text">Password:</span>
                 </label>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Your password"
-                  className="input input-bordered"
-                  required
-                />
+
+                
+                <div className="relative w-full">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    name="password"
+                    placeholder="Your password"
+                    className="p-3 w-full border rounded border-gray-300 focus:outline-none focus-within:ring-1 "
+                    required
+                  />
+
+                  <span
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500 hover:text-gray-700"
+                  >
+                    {showPassword ? <FaEye /> : <FaEyeSlash />}
+                  </span>
+                </div>
 
                 <label className="label">
                   <Link
                     to="/forget-password"
                     state={{ email: email }}
-                    className="label-text-alt link link-hover"
+                    className="label-text-alt link link-hover mt-2"
                   >
                     Forgot password?
                   </Link>
                 </label>
               </div>
+
               {/* Login Button */}
               <div className="form-control mt-6">
                 <button type="submit" className="btn btn-primary">
@@ -108,13 +123,13 @@ const Login = () => {
 
             <div className="divider px-8">OR</div>
 
-            {/* Google Login Button */}
+            {/* Google Login */}
             <div className="form-control p-8 pt-0">
               <button
                 onClick={handleGoogleSignIn}
-                className="btn btn-outline btn-secondary"
+                className="btn btn-outline border-pink-500 text-pink-500 hover:border-none hover:bg-pink-400 hover:text-white flex items-center w-full"
               >
-                Login with Google
+                <FcGoogle size={23} /> <span>Login with Google</span>
               </button>
             </div>
           </div>
@@ -123,4 +138,5 @@ const Login = () => {
     </>
   );
 };
+
 export default Login;

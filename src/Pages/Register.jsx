@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../Providers/AuthProvider";
+import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
   const { createUser, updateUserProfile, googleSignIn } =
@@ -60,59 +61,59 @@ const Register = () => {
             <h1 className="text-4xl font-bold">Create an Account!</h1>
           </div>
           <div className="card w-full shadow-2xl bg-base-100">
-            <form onSubmit={handleRegister} className="card-body">
-              <div className="form-control">
+            <form onSubmit={handleRegister} className="card-body space-y-3">
+              <div className="form-control space-x-1">
                 <label className="label">
-                  <span className="label-text">Name</span>
+                  <span className="label-text">Name: </span>
                 </label>
                 <input
                   type="text"
                   name="name"
                   placeholder="Your name"
-                  className="input input-bordered"
+                  className="p-2 w-full border rounded border-gray-300  focus-within:ring-1  "
                   required
                 />
               </div>
-              <div className="form-control">
+              <div className="form-control space-x-1">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text">Email:</span>
                 </label>
                 <input
                   type="email"
                   name="email"
                   placeholder="Your email"
-                  className="input input-bordered"
+                  className="p-2 w-full border rounded border-gray-300  focus-within:ring-1  "
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Photo URL</span>
+                  <span className="label-text">Photo URL:</span>
                 </label>
                 <input
                   type="text"
                   name="photoURL"
                   placeholder="Link to your photo"
-                  className="input input-bordered"
+                  className="border border-gray-300 rounded p-2 w-full focus-within:ring-1"
                   required
                 />
               </div>
               <div className="form-control relative">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text">Password:</span>
                 </label>
                 <input
                   type={showPassword ? "text" : "password"}
                   name="password"
                   placeholder="Your password"
-                  className="input input-bordered"
+                  className="border border-gray-300 p-3 rounded w-full "
                   required
                 />
                 <span
                   className="absolute top-1/2 right-4 mt-1 cursor-pointer"
                   onClick={() => setShowPassword(!showPassword)}
                 >
-                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                  {showPassword ? <FaEye /> : <FaEyeSlash />}
                 </span>
               </div>
               <div className="form-control mt-6">
@@ -134,9 +135,9 @@ const Register = () => {
             <div className="form-control p-8 pt-0">
               <button
                 onClick={handleGoogleSignIn}
-                className="btn btn-outline btn-secondary"
+                className="btn btn-outline border-pink-500 text-pink-500 hover:border-none hover:bg-pink-400 hover:text-white flex items-center w-full"
               >
-                Register with Google
+                <FcGoogle size={23} /> <span>Register with Google</span>
               </button>
             </div>
           </div>
