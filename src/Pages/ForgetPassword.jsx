@@ -9,7 +9,9 @@ const ForgetPassword = () => {
   const handleReset = (e) => {
     e.preventDefault();
     toast.success("Password Reset email is sent to your Gmail! ");
-    window.location.href = "https://mail.google.com";
+    setTimeout(() => {
+      window.location.href = "https://mail.google.com";
+    }, 2000);
   };
 
   return (

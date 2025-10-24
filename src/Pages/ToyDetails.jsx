@@ -45,7 +45,7 @@ const ToyDetails = () => {
         <title>ToyTopia | ToyDetails</title>
       </Helmet>
       <div className="container mx-auto my-12 p-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-0 mb-12">
           <div data-aos="fade-right">
             <img
               src={pictureURL}
@@ -54,7 +54,7 @@ const ToyDetails = () => {
             />
           </div>
 
-          <div data-aos="fade-left">
+          <div data-aos="fade-left" className="my-auto">
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">{toyName}</h1>
             <p className="text-lg text-gray-600 mb-6">{description}</p>
             <div className="divider"></div>

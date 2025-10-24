@@ -55,7 +55,7 @@ const Register = () => {
       <Helmet>
         <title>ToyTopia | Register</title>
       </Helmet>
-      <div className="hero min-h-[calc(100vh-100px)] bg-base-200">
+      <div className="hero min-h-[calc(100vh-100px)] ">
         <div className="hero-content flex-col w-full max-w-md">
           <div className="text-center">
             <h1 className="text-4xl font-bold">Create an Account!</h1>
@@ -137,7 +137,7 @@ const Register = () => {
                 onClick={handleGoogleSignIn}
                 className="btn btn-outline border-pink-500 text-pink-500 hover:border-none hover:bg-pink-400 hover:text-white flex items-center w-full"
               >
-                <FcGoogle size={23} /> <span>Register with Google</span>
+                <FcGoogle size={23} /> <span>Sign-In with Google</span>
               </button>
             </div>
           </div>

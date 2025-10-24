@@ -43,7 +43,7 @@ const ExtraSection1 = () => {
   return (
     <div className="container mx-auto my-20 px-4" data-aos="fade-up">
       <h2 className="text-4xl font-bold text-center mb-12">
-        🧸 Shop by Category
+        🧸 Shop by Category 🧸
       </h2>
 
       

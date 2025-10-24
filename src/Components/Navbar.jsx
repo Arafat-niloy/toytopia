@@ -86,7 +86,7 @@ const Navbar = () => {
           className=" text-violet-400 text-xl md:text-2xl font-bold lg:pl-8 flex items-center gap-2"
         >
           <span>
-        <img src="/src/assets/letter-t.png" className="w-10 h-10" alt="" />
+        <img src="/letter-t.png" className="w-10 h-10" alt="" />
           </span>
           ToyTopia
         </Link>
