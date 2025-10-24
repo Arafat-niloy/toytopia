@@ -14,12 +14,12 @@ import { Toaster } from "react-hot-toast";
 import "aos/dist/aos.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  
     <AuthProvider>
       <HelmetProvider>
         <RouterProvider router={router} />
         <Toaster />
       </HelmetProvider>
     </AuthProvider>
-  </React.StrictMode>
+  
 );

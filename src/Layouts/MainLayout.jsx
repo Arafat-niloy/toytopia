@@ -1,12 +1,13 @@
 // src/Layouts/MainLayout.jsx
 
 import React, { useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Aos from "aos";
 
 const MainLayout = () => {
+  
   useEffect(() => {
     Aos.init({
       duration: 1000, 
