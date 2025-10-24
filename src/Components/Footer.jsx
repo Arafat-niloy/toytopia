@@ -7,14 +7,12 @@ const Footer = () => {
     <div className=" bg-gradient-to-t from-[#fff1eb] to-[#ace0f985] space-y-4">
       <div className="mt-10 flex justify-center mr-8 text-center font-bold text-3xl">
         
-        <img src="/src/assets/letter-t.png" className="w-10 h-10" alt="" />
-        <span className="text-violet-500">ToyTopia</span>
+        <img src="/src/assets/letter-t.png" className="w-10 h-10" alt="" /><span className="text-violet-500">ToyTopia</span>
         
       </div>
-      <p className="text-center text-lg text-gray-500 font-semibold">
-        A vibrant and playful online marketplace for kids' toys.
-        <br />
-        Encouraging families to discover local sellers.
+      <p className="text-center text-lg text-gray-500 font-semibold px-2 md:px-4 lg:flex lg:flex-col">
+        A vibrant and playful online marketplace for kids' toys. <span className="">Encouraging families to discover local sellers.</span>
+        
       </p>
 
       <div className="flex justify-between  py-4 w-11/12 mx-auto">

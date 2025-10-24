@@ -58,13 +58,13 @@ const AddAToy = () => {
               {/* Toy Name */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Toy Name</span>
-                </label>
+                  <span className="label-text">Toy Name: </span> 
+                </label> <br />
                 <input
                   type="text"
                   name="toyName"
-                  placeholder="e.g., Lego Classic Bricks"
-                  className="input input-bordered"
+                  placeholder="e.g. Lego Classic Bricks"
+                  className="input "
                   required
                 />
               </div>
@@ -72,13 +72,13 @@ const AddAToy = () => {
               {/* Picture URL */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Picture URL</span>
+                  <span className="label-text">Picture URL:</span>
                 </label>
                 <input
                   type="text"
                   name="pictureURL"
-                  placeholder="https://..."
-                  className="input input-bordered"
+                  placeholder="- Enter the picture url -"
+                  className="input "
                   required
                 />
               </div>
@@ -86,13 +86,13 @@ const AddAToy = () => {
               {/* Seller Name  */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Seller Name</span>
+                  <span className="label-text">Seller Name:</span>
                 </label>
                 <input
                   type="text"
                   name="sellerName"
                   defaultValue={user?.displayName}
-                  className="input input-bordered"
+                  className="input "
                   readOnly
                 />
               </div>
@@ -100,13 +100,13 @@ const AddAToy = () => {
               {/* Seller Email  */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Seller Email</span>
+                  <span className="label-text">Seller Email:</span>
                 </label>
                 <input
                   type="email"
                   name="sellerEmail"
                   defaultValue={user?.email}
-                  className="input input-bordered"
+                  className="input "
                   readOnly
                 />
               </div>
@@ -114,11 +114,11 @@ const AddAToy = () => {
               {/* Sub-Category */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Sub-Category</span>
+                  <span className="label-text">Sub-Category:</span>
                 </label>
                 <select
                   name="subCategory"
-                  className="select select-bordered"
+                  className="select "
                   required
                 >
                   <option value="">Select a category</option>
@@ -131,17 +131,17 @@ const AddAToy = () => {
               </div>
 
               {/* Price */}
-              <div className="form-control">
+              <div className="form-control ">
                 <label className="label">
-                  <span className="label-text">Price</span>
-                </label>
+                  <span className="label-text">Price: </span>
+                </label> <br />
                 <input
                   type="number"
                   name="price"
-                  placeholder="$"
+                  placeholder="$ dollar"
                   min="0"
-                  step="0.01"
-                  className="input input-bordered"
+                  step="1"
+                  className="input "
                   required
                 />
               </div>
@@ -149,8 +149,8 @@ const AddAToy = () => {
               {/* Rating */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Rating</span>
-                </label>
+                  <span className="label-text">Rating:</span>
+                </label> <br />
                 <input
                   type="number"
                   name="rating"
@@ -158,7 +158,7 @@ const AddAToy = () => {
                   min="1"
                   max="5"
                   step="0.1"
-                  className="input input-bordered"
+                  className="input "
                   required
                 />
               </div>
@@ -166,34 +166,34 @@ const AddAToy = () => {
               {/* Available Quantity */}
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Available Quantity</span>
+                  <span className="label-text">Available Quantity: (pcs)</span>
                 </label>
                 <input
                   type="number"
                   name="availableQuantity"
-                  placeholder="e.g., 50"
+                  placeholder="e.g. 50"
                   min="0"
-                  className="input input-bordered"
+                  className="input"
                   required
                 />
               </div>
             </div>
 
             {/* Description */}
-            <div className="form-control mt-6">
+            <div className="form-control mt-6 space-x-3">
               <label className="label">
-                <span className="label-text">Description</span>
+                <span className="label-text">Description:</span>
               </label>
               <textarea
                 name="description"
-                className="textarea textarea-bordered h-24"
+                className="textarea h-24"
                 placeholder="Write a short description about the toy..."
                 required
               ></textarea>
             </div>
 
             {/* Submit Button */}
-            <div className="form-control mt-8">
+            <div className=" mt-8">
               <button type="submit" className="btn btn-primary btn-lg">
                 Add This Toy
               </button>
