@@ -15,7 +15,7 @@ const Footer = () => {
         
       </p>
 
-      <div className="flex justify-between  py-4 w-11/12 mx-auto">
+      <div className="flex flex-col md:flex-row md:justify-between gap-4   py-4 w-11/12 mx-auto">
         <div className="flex flex-col">
           <h2 className="text-gray-600 font-bold  lg:text-2xl">Quick Links</h2>
           <Link to="/" className="link link-hover text-gray-500 font-medium">
@@ -37,10 +37,10 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2 className="text-gray-600 font-bold lg:text-2xl text-center">
+          <h2 className="text-gray-600 font-bold lg:text-2xl lg:text-center">
             Social
           </h2>
-          <p className="flex justify-between md:text-4xl space-x-4 text-2xl md:space-x-8 mt-3">
+          <p className="flex lg:justify-between md:text-4xl space-x-4 text-2xl  mt-3">
             <a href="#">
               <FaFacebook />
             </a>
@@ -52,7 +52,7 @@ const Footer = () => {
             </a>
           </p>
         </div>
-        <div>
+        <div className="">
           <h2 className="text-gray-600 font-bold lg:text-2xl">Legal</h2>
           <p className="mt-1 text-gray-500 font-medium link link-hover">
             Privacy policy

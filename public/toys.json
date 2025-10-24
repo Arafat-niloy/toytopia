@@ -20,7 +20,7 @@
     "rating": 4.6,
     "availableQuantity": 60,
     "description": "A beautiful Barbie dreamhouse set with furniture and accessories for endless imaginative play.",
-    "pictureURL": "https://i.ibb.co.com/XxYJs6jf/tengyart-n-Gi9ya-e-FM-unsplash.jpg",
+    "pictureURL": "https://i.ibb.co.com/7dwtjCQ1/barbie.jpg",
     "subCategory": "Dolls"
   },
   {
@@ -37,14 +37,14 @@
   },
   {
     "toyId": 4,
-    "toyName": "Teddy Bear Plush Toy (Large)",
+    "toyName": "Teddy Bear Plush Toy",
     "sellerName": "Soft & Cuddly",
     "sellerEmail": "contact@softandcuddly.com",
     "price": 19.99,
     "rating": 4.9,
     "availableQuantity": 90,
     "description": "Super soft and huggable teddy bear made from premium non-toxic fabric. Perfect for kids and gifts.",
-    "pictureURL": "https://i.ibb.co.com/yB6s4DS9/natalie-kinnear-j-KQ7-N3u1ln-E-unsplash.jpg",
+    "pictureURL": "https://i.ibb.co.com/YTtp8sLz/bear3.jpg",
     "subCategory": "Soft Toys"
   },
   {
@@ -92,7 +92,7 @@
     "rating": 4.8,
     "availableQuantity": 70,
     "description": "Bring home your favorite superhero Spider-Man with this detailed and posable action figure.",
-    "pictureURL": "https://i.ibb.co.com/TCQmzTB/king-lip-b4-YJt1i3o-U4-unsplash.jpg",
+    "pictureURL": "https://i.ibb.co.com/SWZbqPF/spiderman.jpg",
     "subCategory": "Action Figures"
   }
 ]
