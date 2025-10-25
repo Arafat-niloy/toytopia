@@ -57,7 +57,7 @@ const AuthProvider = ({ children }) => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
             console.log('Current User State:', currentUser);
-            setLoading(false); // লোডিং শেষ
+            setLoading(false); 
         });
         return () => unsubscribe();
     }, []);

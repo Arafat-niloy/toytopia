@@ -2,8 +2,7 @@
 
 ToyTopia is a modern, responsive, and dynamic Single Page Application (SPA) for an online toy marketplace. This project is built with React, Firebase Authentication, and styled with Tailwind CSS & DaisyUI.
 
-**Live Site URL:** [https://your-toytopia-site-url.com](https://your-toytopia-site-url.com)
-
+**Live Site URL:** [Click here to visit Live Site.](https://strong-licorice-dd8ba8.netlify.app/)
 ---
 
 ## 🎯 **Project Purpose**
