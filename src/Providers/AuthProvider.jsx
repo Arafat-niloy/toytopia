@@ -1,20 +1,19 @@
-// src/Providers/AuthProvider.jsx
-
 import React, { createContext, useEffect, useState } from 'react';
 import { 
-    GoogleAuthProvider, 
-    createUserWithEmailAndPassword, 
     getAuth, 
-    onAuthStateChanged, 
-    sendPasswordResetEmail, 
+    createUserWithEmailAndPassword, 
     signInWithEmailAndPassword, 
-    signInWithPopup, 
     signOut, 
-    updateProfile 
+    onAuthStateChanged, 
+    updateProfile,
+    GoogleAuthProvider,
+    signInWithPopup
 } from "firebase/auth";
-import auth from '../firebase/firebase.config'; 
+import app from '../firebase/firebase.config';
+
 
 export const AuthContext = createContext(null);
+const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
@@ -41,37 +40,23 @@ const AuthProvider = ({ children }) => {
         return signOut(auth);
     };
 
-    const updateUserProfile = (name, photoURL) => {
+    const updateUserProfile = (name, photo) => {
         return updateProfile(auth.currentUser, {
-            displayName: name, 
-            photoURL: photoURL
+            displayName: name, photoURL: photo
         });
-    };
-
-    const resetPassword = (email) => {
-        setLoading(true);
-        return sendPasswordResetEmail(auth, email);
     };
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
-            console.log('Current User State:', currentUser);
-            setLoading(false); 
+            setLoading(false);
         });
-        return () => unsubscribe();
+        return () => {
+            unsubscribe();
+        }
     }, []);
 
-    const authInfo = {
-        user,
-        loading,
-        createUser,
-        signIn,
-        googleSignIn,
-        logOut,
-        updateUserProfile,
-        resetPassword
-    };
+    const authInfo = { user, loading, createUser, signIn, googleSignIn, logOut, updateUserProfile };
 
     return (
         <AuthContext.Provider value={authInfo}>

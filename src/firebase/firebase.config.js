@@ -1,16 +1,18 @@
+// src/firebase/firebase.config.js
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  apiKey: "AIzaSyDSoOIFvMSUxjpJb5m8pUOR1TnZOYMKCkE",
+  authDomain: "toytopia-project.firebaseapp.com",
+  projectId: "toytopia-project",
+  storageBucket: "toytopia-project.appspot.com",
+  messagingSenderId: "904111649301",
+  appId: "1:904111649301:web:f61d2cb56e07339af4941c"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
 
-export default auth;
+// ✅ Default export
+export default app;
